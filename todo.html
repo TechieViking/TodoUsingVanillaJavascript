@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<title>Todo App</title>
+
+		<style>
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			.container {
+				width: 600px;
+				margin: 30px auto;
+			}
+			.starter-template h1 {
+				font-size: 2rem;
+				margin-bottom: 0.5rem;
+				font-weight: 500;
+				line-height: 1.2;
+				color: #212529;
+				text-align: left;
+			}
+			.form-group {
+				margin-bottom: 1rem;
+			}
+			.form-group label {
+				font-size: 20px;
+				margin-bottom: 10px;
+				display: block;
+			}
+			.form-control {
+				display: block;
+				width: 100%;
+				height: calc(1.5em + 0.75rem + 2px);
+				padding: 0.375rem 0.75rem;
+				font-size: 1rem;
+				font-weight: 400;
+				line-height: 1.5;
+				color: #495057;
+				background-color: #fff;
+				background-clip: padding-box;
+				border: 1px solid #ced4da;
+				border-radius: 0.25rem;
+				transition: border-color 0.15s ease-in-out,
+					box-shadow 0.15s ease-in-out;
+				box-sizing: border-box;
+			}
+
+			.btn {
+				display: inline-block;
+				font-weight: 400;
+				color: #212529;
+				text-align: center;
+				vertical-align: middle;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				background-color: transparent;
+				border: 1px solid transparent;
+				padding: 0.375rem 0.75rem;
+				font-size: 1rem;
+				line-height: 1.5;
+				border-radius: 0.25rem;
+				transition: color 0.15s ease-in-out,
+					background-color 0.15s ease-in-out,
+					border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+			}
+			.btn-primary {
+				color: #fff;
+				background-color: #007bff;
+				border-color: #007bff;
+			}
+			.clearfix {
+				overflow: hidden;
+			}
+			.float-left {
+				float: left !important;
+			}
+			.float-right {
+				float: right !important;
+			}
+
+			#todo {
+				margin-top: 30px;
+			}
+			ul {
+				list-style-type: none;
+				padding: 0;
+			}
+			ul li {
+				padding: 10px;
+				border-radius: 5px;
+				color: #2020d6;
+				/* background: #ff5722; */
+				position: relative;
+				margin-bottom: 10px;
+				opacity: 1;
+				transition: opacity 1s;
+				border: 1px solid #2020d6;
+			}
+			ul li.fade {
+				opacity: 0;
+			}
+			ul li span {
+				background: url(delete.svg) 0 0 no-repeat;
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				right: 12px;
+				top: 12px;
+				cursor: pointer;
+				background-size: contain;
+			}
+		</style>
+		<!-- Custom styles for this template -->
+	</head>
+	<body>
+		<main role="main" class="container">
+			<div class="starter-template">
+				<h1>Welcome to your todo list</h1>
+			</div>
+			<form>
+				<div class="form-group">
+					<label for="exampleInputEmail1">Todo</label>
+					<input
+						type="text"
+						class="form-control"
+						id="todoinput"
+						aria-describedby="emailHelp"
+						placeholder="Type your todo here"
+						autocomplete="off"
+					/>
+				</div>
+				<p class="clearfix">
+					<button class="btn btn-primary float-left">Add</button
+					><button
+						class="btn btn-primary float-right"
+						id="count"
+					></button>
+				</p>
+			</form>
+			<div id="todo">
+				<ul id="todoul"></ul>
+			</div>
+			<div></div>
+		</main>
+		<script src="todo.js"></script>
+	</body>
+</html>
